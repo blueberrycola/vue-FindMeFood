@@ -5,3 +5,7 @@ Fake grubhub that instead of ordering food just lists restaurants based on butto
 #Commit #1:
 
 Created boiler plate vue app. Added routing for various pages. Created Footer
+
+#Commit #2-4:
+
+Created HTML boiler plate code for LoginView and RegisterView inside Views directory
