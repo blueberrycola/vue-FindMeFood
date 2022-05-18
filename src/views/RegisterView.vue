@@ -9,6 +9,9 @@
         <p><label for="username">Password:</label></p>
         <input type="password" name="password" id="pword">
 
+        <p><label for="pword-confirm">Password Confirm:</label></p>
+        <input type="password" name="pword-confirm" id="pword-confirm">
+
         <p><label for="email">Email:</label></p>
         <input type="text" name="email" id="email">
 
@@ -16,6 +19,7 @@
         <input type="text" name="fullname" id="fname">
 
       </form>
+      <button>Sign Up!</button>
     </div>
   </div>
 </template>
