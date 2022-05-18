@@ -1,6 +1,22 @@
 <template>
-  <div class="register">
-    <h1>This is an about page</h1>
+  <div class="register-container">
+    <h1>Register:</h1>
+    <div class="register-form">
+      <form action="myurl" method="POST" name="regForm">
+        <p><label for="username">Username:</label></p>
+        <input type="text" name="username" id="uname">
+
+        <p><label for="username">Password:</label></p>
+        <input type="password" name="password" id="pword">
+
+        <p><label for="email">Email:</label></p>
+        <input type="text" name="email" id="email">
+
+        <p><label for="fullname">Full Name:</label></p>
+        <input type="text" name="fullname" id="fname">
+
+      </form>
+    </div>
   </div>
 </template>
 
