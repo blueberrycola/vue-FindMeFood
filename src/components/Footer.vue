@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="greetings">
+  <div class="footer">
     <h1 class="green">{{ msg }}</h1>
     <h3>
       This Project was made by Chase Johnston,
@@ -34,16 +34,10 @@ h3 {
   font-size: 1.2rem;
   padding: 10px;
 }
-
-.greetings h1,
-.greetings h3 {
-  text-align: center;
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
-  }
-}
 </style>

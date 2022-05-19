@@ -19,17 +19,48 @@
         <input type="text" name="fullname" id="fname">
 
       </form>
-      <button>Sign Up!</button>
+      <div class="register-buttonboard">
+        <button>Sign Up!</button>
+      </div>
+
     </div>
   </div>
 </template>
 
 <style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
+
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.register-container {
+  position: center;
+  top: 150px;
+  left: 70px;
+  width: 1000px;
+  height: 550px;
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 15px 15px, rgba(255, 255, 255, 0.12) 0px -12px 31px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 23px, rgba(255, 255, 255, 0.09) 0px -3px 15px;
+  border-radius: 25px;
+  background: rgb(0, 128, 79);
+}
+.register-form {
+  left: 50px;
+  width: 90%;
+  top: 20px;
+  
+}
+.register-buttonboard{
+  padding: 5px;
+  right: 15px;
+  bottom: 5px;
 }
 </style>
