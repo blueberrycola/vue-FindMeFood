@@ -2,7 +2,7 @@
   <div class="register-container">
     <h1>Register:</h1>
     <div class="register-form">
-      <form action="myurl" method="POST" name="regForm">
+      <form class="regForm">
         <p><label for="username">Username:</label></p>
         <input type="text" name="username" id="uname">
 
@@ -17,15 +17,39 @@
 
         <p><label for="fullname">Full Name:</label></p>
         <input type="text" name="fullname" id="fname">
-
+      <!-- Create event handler for getting register-form input -->
       </form>
       <div class="register-buttonboard">
-        <button>Sign Up!</button>
+        <button @click="initPropsFromBtn({props})">Sign Up!</button>
       </div>
 
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  setup(){
+    console.log("Test");
+  },
+  methods: {
+    initPropsFromBtn() {
+      const json = {
+        user: document.getElementById("uname").value,
+        pass: document.getElementById("pword").value,
+        confPass: document.getElementById("pword-confirm").value,
+        email: document.getElementById("email").value,
+        fullname: document.getElementById("fname").value
+      }
+      console.log(json);
+    }
+  }
+}
+
+
+
+</script>
+
 
 <style>
 
