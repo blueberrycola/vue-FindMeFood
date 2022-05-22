@@ -20,7 +20,7 @@
       <!-- Create event handler for getting register-form input -->
       </form>
       <div class="register-buttonboard">
-        <button @click="initPropsFromBtn({props})">Sign Up!</button>
+        <button @click="initJson()">Sign Up!</button>
       </div>
 
     </div>
@@ -33,7 +33,7 @@ export default {
     console.log("Test");
   },
   methods: {
-    initPropsFromBtn() {
+    initJson() {
       const json = {
         user: document.getElementById("uname").value,
         pass: document.getElementById("pword").value,
