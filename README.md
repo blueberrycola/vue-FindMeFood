@@ -1,16 +1,16 @@
 # vue-FindMeFood
-Fake grubhub that instead of ordering food just lists restaurants based on buttons pressed or input. You can favorite these locations and see them in a separate page. Uses Spring Boot for Backend
+    Fake grubhub that instead of ordering food just lists restaurants based on buttons pressed or input. You can favorite these locations and see them in a separate page. Uses Spring Boot for Backend
 ## Commit Notes:
 
 # Commit #1:
 
-Created boiler plate vue app. Added routing for various pages. Created Footer
+    Created boiler plate vue app. Added routing for various pages. Created Footer
 
 # Commit #2-4:
 
-Created HTML boiler plate code for LoginView and RegisterView inside Views directory
+    Created HTML boiler plate code for LoginView and RegisterView inside Views directory
 # Commit 4-7:
-Added LoginView CSS + RegisterView CSS
+    Added LoginView CSS + RegisterView CSS
 # Commit 8:
 Added method in RegisterView: initJson()
     This json variable will be used to send via the restful api so the
@@ -24,3 +24,7 @@ Added method in RegisterView: initJson()
     Fixed readme.md
 # Commit 13:
     Fixed bug where navbar wouldnt work on Home page
+# Commit 14:
+    npm i request, curl
+    created checking for if password and confPass are matching
+    created email regex expression to check if register form has valid email address

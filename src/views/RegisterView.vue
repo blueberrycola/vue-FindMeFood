@@ -42,6 +42,40 @@ export default {
         fullname: document.getElementById("fname").value
       }
       console.log(json);
+      var test = this.checkRegisterForm(json)
+      if(test == 0) {
+        console.log("register error");
+      } else {
+        console.log("Success!");
+        let boolregform = this.postRegForm(json);
+        if(boolregform) {
+          console.log("Form Successfuly posted to Spring Boot!");
+        } else {
+          console.log("Error with RegForm");
+          //FIXME: add css popup for pointing out what is wrong with register form
+        }
+      }
+    },
+    checkRegisterForm(json) {
+      //Check if password and confirm password fields match
+      if(json.pass === json.confPass) {
+        console.log("Passwords Match!");
+      } else {
+        console.log("Passwords dont match :(")
+        return 0;
+      }
+      //email regex to validate whether it is a real email address
+      let regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+      let boolregex = regex.test(json.email);
+      if(boolregex) {
+        console.log("Email is valid!");
+      } else {
+        console.log("Email isnt valid");
+        return 0;
+      }
+      //FIXME: Send service request to check if user name in register form
+      //       is not already taken
+      return 1;
     }
   }
 }
