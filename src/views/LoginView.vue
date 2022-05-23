@@ -13,7 +13,7 @@
       </form>
       <div class="login-buttonboard">
         <label class="switch">
-          Remember Me
+          Remember Me 
           <input type="checkbox">
           <span class="slider"></span>
         </label>
@@ -52,13 +52,28 @@ input[type=password] {
   top: 50px;
   
 }
-.login-buttonboard{
+.login-buttonboard {
   padding: 5px;
-  right: 15px;
-  bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.login-buttonboard .switch{
-  padding: 10px;
+.login-buttonboard switch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
   
+}
+.login-buttonboard button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px;
+    left: 16px;
+    width: 200px;
+    height: 60px;
 }
 </style>

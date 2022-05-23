@@ -20,7 +20,7 @@
       <!-- Create event handler for getting register-form input -->
       </form>
       <div class="register-buttonboard">
-        <button @click="initJson()">Sign Up!</button>
+        <button @click="initJson()">Register</button>
       </div>
 
     </div>
@@ -86,5 +86,25 @@ input[type=password] {
   padding: 5px;
   right: 15px;
   bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register-buttonboard button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px;
+    width: 200px;
+    height: 60px;
+    
+}
+.register-buttonboard button:hover {
+    background: lightgray;
+}
+.register-buttonboard button:active {
+    background: lightgreen
 }
 </style>

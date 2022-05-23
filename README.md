@@ -9,3 +9,14 @@ Created boiler plate vue app. Added routing for various pages. Created Footer
 #Commit #2-4:
 
 Created HTML boiler plate code for LoginView and RegisterView inside Views directory
+Commit 4-7:
+Added LoginView CSS + RegisterView CSS
+Commit 8:
+Added method in RegisterView: initJson()
+    This json variable will be used to send via the restful api so the
+    spring boot server can grab it and successfully create user
+Commit 9:
+    Home.vue component: added template + css
+Commit 10:
+    Added Register Button with Home button css
+    Done also for login
