@@ -18,7 +18,9 @@ Added method in RegisterView: initJson()
 # Commit 9:
     Home.vue component: added template + css
 # Commit 10:
-    Added Register Button with Home button css
+    Added Register Button from Home button css
     Done also for login
-# Commit 11-12
+# Commit 11-12:
     Fixed readme.md
+# Commit 13:
+    Fixed bug where navbar wouldnt work on Home page
