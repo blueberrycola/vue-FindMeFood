@@ -26,7 +26,7 @@
 
 <script>
 import axios from 'axios'
-
+axios.defaults.port = 8080
 
 export default {
   
@@ -36,8 +36,8 @@ export default {
   methods: {
     initJson() {
       const json = {
-        user: document.getElementById("uname").value,
-        pass: document.getElementById("pword").value,
+        username: document.getElementById("uname").value,
+        password: document.getElementById("pword").value,
         cpass: document.getElementById("pword-confirm").value,
         email: document.getElementById("email").value,
       }
@@ -52,7 +52,7 @@ export default {
     },
     checkRegisterForm(json) {
       //Check if password and confirm password fields match
-      if(json.pass === json.cpass) {
+      if(json.password === json.cpass) {
         console.log("Passwords Match!");
       } else {
         console.log("Passwords dont match :(")
@@ -67,18 +67,7 @@ export default {
         console.log("Email isnt valid");
         return 0;
       }
-      axios.create({
-          baseURL: 'http:/localhost:8080/',
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
-            "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token"
-          }
-      });
-      const res = axios.put("register/user", json);
-      console.log(res);
-
-      
+      axios.post('http://localhost:8080/register/user', json);
       return 1;
     }
   }

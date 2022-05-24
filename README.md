@@ -3,7 +3,6 @@
 ## Commit Notes:
 
 # Commit #1:
-
     Created boiler plate vue app. Added routing for various pages. Created Footer
 
 # Commit #2-4:
@@ -28,3 +27,9 @@ Added method in RegisterView: initJson()
     npm i request, curl
     created checking for if password and confPass are matching
     created email regex expression to check if register form has valid email address
+# Commit 15:
+    creating axios code for request. Failure.
+# Commit 16: 
+    figuring out how to make a request from localhost:3000 to localhost:8080.
+    edit:
+    It is done by @CrossReference("yoururl:8080") tag in Spring!
