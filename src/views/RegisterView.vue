@@ -14,9 +14,6 @@
 
         <p><label for="email">Email:</label></p>
         <input type="text" name="email" id="email">
-
-        <p><label for="fullname">Full Name:</label></p>
-        <input type="text" name="fullname" id="fname">
       <!-- Create event handler for getting register-form input -->
       </form>
       <div class="register-buttonboard">
@@ -28,7 +25,11 @@
 </template>
 
 <script>
+import axios from 'axios'
+
+
 export default {
+  
   setup(){
     console.log("Test");
   },
@@ -37,28 +38,21 @@ export default {
       const json = {
         user: document.getElementById("uname").value,
         pass: document.getElementById("pword").value,
-        confPass: document.getElementById("pword-confirm").value,
+        cpass: document.getElementById("pword-confirm").value,
         email: document.getElementById("email").value,
-        fullname: document.getElementById("fname").value
       }
       console.log(json);
-      var test = this.checkRegisterForm(json)
+      let test = this.checkRegisterForm(json)
       if(test == 0) {
         console.log("register error");
       } else {
         console.log("Success!");
-        let boolregform = this.postRegForm(json);
-        if(boolregform) {
-          console.log("Form Successfuly posted to Spring Boot!");
-        } else {
-          console.log("Error with RegForm");
-          //FIXME: add css popup for pointing out what is wrong with register form
-        }
+        this.checkRegisterForm(json);
       }
     },
     checkRegisterForm(json) {
       //Check if password and confirm password fields match
-      if(json.pass === json.confPass) {
+      if(json.pass === json.cpass) {
         console.log("Passwords Match!");
       } else {
         console.log("Passwords dont match :(")
@@ -73,8 +67,18 @@ export default {
         console.log("Email isnt valid");
         return 0;
       }
-      //FIXME: Send service request to check if user name in register form
-      //       is not already taken
+      axios.create({
+          baseURL: 'http:/localhost:8080/',
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
+            "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token"
+          }
+      });
+      const res = axios.put("register/user", json);
+      console.log(res);
+
+      
       return 1;
     }
   }
