@@ -13,15 +13,44 @@
       <div class="login-buttonboard">
         <label class="switch">
           Remember Me 
-          <input type="checkbox">
+          <input @click="createCookie()" type="checkbox">
           <span class="slider"></span>
         </label>
-        <button>Login</button>
+        <button @click="loginReq()">Login</button>
       </div>
 
     </div>
   </div>
 </template>
+<script>
+import axios from 'axios'
+export default {
+  setup() {
+    console.log('init success');
+  },
+  methods: {
+      loginReq() {
+        const json = {
+          username: document.getElementById("uname").value,
+          password: document.getElementById("pword").value
+        };
+        console.log(json);
+        var url = 'http://localhost:8080/login/'
+        url += json.username
+        console.log(url)
+        axios.get(url, json);
+
+        
+      },
+      createCookie() {
+        console.log('test');
+      }
+  }
+}
+</script>
+
+
+
 
 <style>
 

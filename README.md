@@ -36,3 +36,6 @@ Added method in RegisterView: initJson()
     Fixed input width on /login, 
     Basic text added for /about, fixed header and container placement.
     Shortened CSS for login form container, adjusted css.
+# Commit 18:
+    Login button event listener + skeleton code for get request in axios
+    Defined function for toggling remember me checkbox
