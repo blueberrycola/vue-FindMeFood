@@ -1,9 +1,8 @@
 <template>
   <div class="login-container">
-    
     <div class="login-form">
       <h1>Login:</h1>
-      <form action="myurl" method="GET" name="loginForm">
+      <form id="loginForm">
         <p><label for="username">Username:</label></p>
         <input type="text" name="username" id="uname">
 
@@ -25,14 +24,15 @@
 </template>
 
 <style>
+
 input[type=text] {
-  width: 100%;
+  width: 80%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
 }
 input[type=password] {
-  width: 100%;
+  width: 80%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -40,20 +40,25 @@ input[type=password] {
 .login-container {
   position: center;
   top: 150px;
-  left: 70px;
-  width: 1000px;
-  height: 550px;
+  width: 500px;
+  height: 400px;
   box-shadow: rgba(255, 255, 255, 0.25) 0px 15px 15px, rgba(255, 255, 255, 0.12) 0px -12px 31px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 23px, rgba(255, 255, 255, 0.09) 0px -3px 15px;
   border-radius: 25px;
   background: rgb(0, 128, 79);
 }
 .login-form {
-  left: 50px;
-  top: 50px;
+  left: 40px;
+  top: 40px;
   
+}
+.login-form h1{
+  top: -25px;
+  left: -16px;
 }
 .login-buttonboard {
   padding: 5px;
+  right: 65px;
+  top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;

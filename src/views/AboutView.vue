@@ -1,15 +1,17 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="container">
+    <h1>About this project:</h1>
+    <p>This project was an independant programming project to create
+      a functioning and secure login system and learn more about vue.js. The purpose of the website 
+      is to pull data from the Google Places API based on what type of restaurant
+      you are in the mood for. Users of this website can 'star' restaurants to save
+      in their profile to view later.
+    </p>
   </div>
 </template>
 
 <style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
+.container {
+  top: 75px;
 }
 </style>

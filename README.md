@@ -6,7 +6,6 @@
     Created boiler plate vue app. Added routing for various pages. Created Footer
 
 # Commit #2-4:
-
     Created HTML boiler plate code for LoginView and RegisterView inside Views directory
 # Commit 4-7:
     Added LoginView CSS + RegisterView CSS
@@ -33,3 +32,7 @@ Added method in RegisterView: initJson()
     figuring out how to make a request from localhost:3000 to localhost:8080.
     edit:
     It is done by @CrossReference("yoururl:8080") tag in Spring!
+# Commit 17:
+    Fixed input width on /login, 
+    Basic text added for /about, fixed header and container placement.
+    Shortened CSS for login form container, adjusted css.
