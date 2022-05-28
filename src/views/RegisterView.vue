@@ -67,7 +67,7 @@ export default {
         console.log("Email isnt valid");
         return 0;
       }
-      axios.post('http://localhost:8080/register/user', json);
+      axios.post('http://localhost:8080/user/register', json);
       return 1;
     }
   }

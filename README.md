@@ -39,3 +39,6 @@ Added method in RegisterView: initJson()
 # Commit 18:
     Login button event listener + skeleton code for get request in axios
     Defined function for toggling remember me checkbox
+# Commit 19:
+    Quick fix for home navigation bar not working added button listener
+    for home

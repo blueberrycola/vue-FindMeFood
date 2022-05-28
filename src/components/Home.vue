@@ -3,16 +3,33 @@
         <h2>Zipcode:</h2>
         <br>
         <div class="form-group">
-            <input class="form-field" type="text">
+            <input class="form-field" type="text" id="zip-form">
         </div>
         <br>
         <div class="zip-btn">
-            <button>
+            <button @click="submitBtn()">
                 <h2>Submit</h2>
             </button>
         </div>
     </div>
 </template>
+
+<script>
+
+export default {
+    setup() {
+        console.log('test');
+    },
+    methods: {
+        submitBtn() {
+            console.log('button');
+            var zip = document.getElementById("zip-form").value
+            console.log(zip)
+        }
+    }
+}
+</script>
+
 
 <style>
 .zip-btn {

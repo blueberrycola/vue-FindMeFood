@@ -35,10 +35,15 @@ export default {
           password: document.getElementById("pword").value
         };
         console.log(json);
-        var url = 'http://localhost:8080/login/'
+        var url = 'http://localhost:8080/user/'
         url += json.username
         console.log(url)
-        axios.get(url, json);
+        var responce = axios.get(url, json);
+        
+
+        //FIXME: After Spring Boot compares user input with database password
+        //return 0 if denied, return 1 if access granted. Save state into home.
+
 
         
       },
@@ -48,9 +53,6 @@ export default {
   }
 }
 </script>
-
-
-
 
 <style>
 
