@@ -1,7 +1,7 @@
 <template>
     <div class="home-container">
         <h2>Zipcode:</h2>
-        <h3>Selected Types: []</h3>
+        <h3>Selected Types: {{returnSelectedButtons()}}</h3>
         <br>
         <div class="form-group">
             <input class="form-field" type="text" id="zip-form">
@@ -13,11 +13,14 @@
             </button>
         </div>
         <div class="food-buttonboard">
-            <button v-for="item in buttonlist">
+            <button @click="appendBtn(item)" v-for="item in buttonlist">
                 {{ item }}
             </button>
             
-            
+
+        </div>
+        <div class="clear-btn">
+            <button @click="clearSelected()">Clear</button>
         </div>
     </div>
 </template>
@@ -30,6 +33,7 @@ export default {
     },
     data () {
         return {
+        selectedButtons: [],
         buttonlist: ['Pizza', 'Chinese', 'Sushi',
          'Sandwiches', 'Chicken', 'Burgers',
           'Mexican', 'Italian', 'Mediterranean',
@@ -40,6 +44,15 @@ export default {
             console.log('button');
             var zip = document.getElementById("zip-form").value
             console.log(zip)
+        },
+        returnSelectedButtons() {
+            return this.selectedButtons;
+        },
+        appendBtn(str) {
+            this.selectedButtons.push(str)
+        },
+        clearSelected() {
+            this.selectedButtons = []
         }
     }
 }
@@ -47,13 +60,33 @@ export default {
 
 
 <style>
+.clear-btn {
+    bottom: -50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+.clear-btn button {
+    width: 100px;
+    height: 50px;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 10px;
+}
 .food-buttonboard{
     display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 10px;
-    left: 95px;
-    bottom: -20px;
     align-items: center;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    padding: 40px;
+    bottom: -20px;
+
 }
 
 .food-buttonboard button{

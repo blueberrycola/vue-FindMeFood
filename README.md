@@ -44,3 +44,5 @@ Added method in RegisterView: initJson()
     for home
 # Commit 20:
     Created button board for food types in Home.vue. Added CSS Styling
+# Commit 21:
+    Created clear function, displays selected types, fixed css bugs
