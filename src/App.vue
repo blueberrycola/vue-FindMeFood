@@ -48,7 +48,7 @@ a,
 nav {
   width: 100%;
   font-size: 12px;
-  top: 0px;
+  top: -40px;
   position: absolute;
   margin-top: 2rem;
 }

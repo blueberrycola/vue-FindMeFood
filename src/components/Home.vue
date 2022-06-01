@@ -34,7 +34,7 @@ export default {
     data () {
         return {
         selectedButtons: [],
-        buttonlist: ['Pizza', 'Chinese', 'Sushi',
+        buttonlist: ['Pizza','BBQ', 'Brunch', 'Korean', 'Chinese', 'Sushi',
          'Sandwiches', 'Chicken', 'Burgers',
           'Mexican', 'Italian', 'Mediterranean',
            'Indian', 'Greek', 'African']}
@@ -61,7 +61,7 @@ export default {
 
 <style>
 .clear-btn {
-    bottom: -50px;
+    bottom: 5px;
     text-align: center;
     display: flex;
     align-items: center;

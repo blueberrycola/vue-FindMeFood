@@ -55,7 +55,6 @@ export default {
 </script>
 
 <style>
-
 input[type=text] {
   width: 80%;
   padding: 12px 20px;

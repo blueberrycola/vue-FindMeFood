@@ -46,3 +46,6 @@ Added method in RegisterView: initJson()
     Created button board for food types in Home.vue. Added CSS Styling
 # Commit 21:
     Created clear function, displays selected types, fixed css bugs
+# Commit 22:
+    Fixed bug where home element overlapped nav bar. Old fix would
+    clone nav bar after visiting home
