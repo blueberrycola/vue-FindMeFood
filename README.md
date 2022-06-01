@@ -42,3 +42,5 @@ Added method in RegisterView: initJson()
 # Commit 19:
     Quick fix for home navigation bar not working added button listener
     for home
+# Commit 20:
+    Created button board for food types in Home.vue. Added CSS Styling

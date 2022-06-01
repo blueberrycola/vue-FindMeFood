@@ -1,6 +1,7 @@
 <template>
     <div class="home-container">
         <h2>Zipcode:</h2>
+        <h3>Selected Types: []</h3>
         <br>
         <div class="form-group">
             <input class="form-field" type="text" id="zip-form">
@@ -11,6 +12,13 @@
                 <h2>Submit</h2>
             </button>
         </div>
+        <div class="food-buttonboard">
+            <button v-for="item in buttonlist">
+                {{ item }}
+            </button>
+            
+            
+        </div>
     </div>
 </template>
 
@@ -19,6 +27,13 @@
 export default {
     setup() {
         console.log('test');
+    },
+    data () {
+        return {
+        buttonlist: ['Pizza', 'Chinese', 'Sushi',
+         'Sandwiches', 'Chicken', 'Burgers',
+          'Mexican', 'Italian', 'Mediterranean',
+           'Indian', 'Greek', 'African']}
     },
     methods: {
         submitBtn() {
@@ -32,6 +47,26 @@ export default {
 
 
 <style>
+.food-buttonboard{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    left: 95px;
+    bottom: -20px;
+    align-items: center;
+}
+
+.food-buttonboard button{
+    width: 100px;
+    height: 50px;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
 .zip-btn {
     display: flex;
     align-items: center;
@@ -131,6 +166,9 @@ export default {
 }
 .home-container {
     top: 75px;
+}
+.home-container h3{
+    right: -10px;
 }
 
 </style>
