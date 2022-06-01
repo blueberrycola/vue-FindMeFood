@@ -46,7 +46,18 @@ export default {
             console.log(zip)
         },
         returnSelectedButtons() {
-            return this.selectedButtons;
+            if(this.selectedButtons.length == 0) {
+                return ' ';
+            } else {
+                return this.findUnique();
+            }
+        },
+        findUnique() {
+                //This filters out all duplicate presses
+                let uniqueButtons = this.selectedButtons.filter((c, index) => {
+                    return this.selectedButtons.indexOf(c) === index;
+                })
+                return uniqueButtons
         },
         appendBtn(str) {
             this.selectedButtons.push(str)
@@ -78,6 +89,17 @@ export default {
     justify-content: center;
     border-radius: 8px;
     padding: 10px;
+    background: rgb(218, 51, 84);
+}
+.clear-btn button:hover {
+    background: red;
+}
+
+.food-buttonboard button:hover {
+    background: lightgray;
+}
+.food-buttonboard button:active {
+    background: lightgreen
 }
 .food-buttonboard{
     display: grid;

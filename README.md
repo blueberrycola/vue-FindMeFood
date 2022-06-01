@@ -48,4 +48,12 @@ Added method in RegisterView: initJson()
     Created clear function, displays selected types, fixed css bugs
 # Commit 22:
     Fixed bug where home element overlapped nav bar. Old fix would
-    clone nav bar after visiting home
+    clone nav bar after revisiting home
+# Commit 23:
+    Hover + click CSS for food-buttonboard class and clear-btn.
+    Color change to clear button
+    findUnique(): This function removes any duplicates from displaying
+        if a user were to press a button twice.
+        It will also be used in the future to return the users input w/o
+        duplicates.
+    returnSelectedButtons(): removes '[]' being displayed in h3 header inside home.vue. Uses findUnique() to get user input w/o duplicates
