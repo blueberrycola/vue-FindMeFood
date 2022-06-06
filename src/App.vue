@@ -9,8 +9,7 @@ import Footer from '@/components/Footer.vue'
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/login">Login</RouterLink>
-        <RouterLink to="/register">Register</RouterLink>
+        <RouterLink to="/login">Login or Register!</RouterLink>
         <RouterLink to="/starredPlaces">Starred Places</RouterLink>
       </nav>
     </div>

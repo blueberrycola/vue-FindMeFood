@@ -33,6 +33,8 @@ export default {
     },
     data () {
         return {
+        //selectedButtons used for <h3> tag
+        //buttonList used to render many buttons for user choices
         selectedButtons: [],
         buttonlist: ['Pizza','BBQ', 'Brunch', 'Korean', 'Chinese', 'Sushi',
          'Sandwiches', 'Chicken', 'Burgers',
@@ -41,12 +43,17 @@ export default {
     },
     methods: {
         submitBtn() {
-            console.log('button');
+            //Extract user input
             var zip = document.getElementById("zip-form").value
+            //call Places API with zipcode and user input
+
+            //route to /places. (not viewable on nav)
+            
             console.log(zip)
         },
         returnSelectedButtons() {
             if(this.selectedButtons.length == 0) {
+                //If list is empty return empty space instead of '[]'
                 return ' ';
             } else {
                 return this.findUnique();
@@ -60,9 +67,11 @@ export default {
                 return uniqueButtons
         },
         appendBtn(str) {
+            //Upon clicking this adds string into selectedButtons list
             this.selectedButtons.push(str)
         },
         clearSelected() {
+            //Erases list
             this.selectedButtons = []
         }
     }
