@@ -1,7 +1,5 @@
 # vue-FindMeFood
     Fake grubhub that instead of ordering food just lists restaurants based on buttons pressed or input. You can favorite these locations and see them in a separate page. Uses Spring Boot for Backend
-## Commit Notes:
-
 # Commit #1:
     Created boiler plate vue app. Added routing for various pages. Created Footer
 
@@ -57,3 +55,12 @@ Added method in RegisterView: initJson()
         It will also be used in the future to return the users input w/o
         duplicates.
     returnSelectedButtons(): removes '[]' being displayed in h3 header inside home.vue. Uses findUnique() to get user input w/o duplicates
+# Commit 24:
+    Merged Login and Register into one page
+# Commit 25:
+    Created prompt to reveal register tab.
+# Commit 26:
+    Modifying HomeView to allow HomeList to replace Home.vue,
+    
+    $emit boolean signal to HomeView so it knows when to change to 
+    HomeList and call Places API
