@@ -28,6 +28,8 @@
 <script>
 
 export default {
+    
+    
     setup() {
         console.log('test');
     },
@@ -35,6 +37,7 @@ export default {
         return {
         //selectedButtons used for <h3> tag
         //buttonList used to render many buttons for user choices
+        zipcode: 0,
         selectedButtons: [],
         buttonlist: ['Pizza','BBQ', 'Brunch', 'Korean', 'Chinese', 'Sushi',
          'Sandwiches', 'Chicken', 'Burgers',
@@ -43,13 +46,16 @@ export default {
     },
     methods: {
         submitBtn() {
-            //Extract user input
-            var zip = document.getElementById("zip-form").value
-            //call Places API with zipcode and user input
-
-            //route to /places. (not viewable on nav)
             
-            console.log(zip)
+            this.zipcode = document.getElementById('zip-form').value;
+            var foo = this.returnSelectedButtons();
+            let data = {
+                zipcode: this.zipcode,
+                foodlist: foo
+            };
+            
+            this.$emit('homeclicked', data) //Emit to Homeview
+
         },
         returnSelectedButtons() {
             if(this.selectedButtons.length == 0) {
