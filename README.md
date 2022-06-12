@@ -59,8 +59,12 @@ Added method in RegisterView: initJson()
     Merged Login and Register into one page
 # Commit 25:
     Created prompt to reveal register tab.
-# Commit 26:
+# Commit 26-28:
     Modifying HomeView to allow HomeList to replace Home.vue,
     
     $emit boolean signal to HomeView so it knows when to change to 
     HomeList and call Places API
+# Commit 29:
+    API Key secure in .env file
+    Testing Places API
+    Created new favicon (fixme: add transparency to img)
